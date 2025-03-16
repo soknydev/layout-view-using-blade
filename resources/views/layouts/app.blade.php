@@ -7,23 +7,12 @@
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 </head>
 <body>
-    <header>
-        <h1>Laravel Website</h1>
-        <nav>
-            <a href="{{ route('home') }}">Home</a>
-            <a href="{{ route('about') }}">About</a>
-            <a href="{{ route('services') }}">Services</a>
-            <a href="{{ route('portfolio') }}">Portfolio</a>
-            <a href="{{ route('contact') }}">Contact</a>
-        </nav>
-    </header>
+    @include('partials.navbar')
 
     <main>
         @yield('content')
     </main>
 
-    <footer>
-        <p>&copy; 2025 Laravel App</p>
-    </footer>
+    @include('partials.footer')
 </body>
 </html>
